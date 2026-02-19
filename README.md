@@ -21,7 +21,7 @@ The game ends when both players pass consecutively.
 
 ## Project Structure
 
-The implementation is contained in a single file: `FP2324P2.py`
+The implementation is contained in a single file: `go.py`
 
 It defines three **Abstract Data Types (ADTs)** and a set of additional functions:
 
@@ -96,7 +96,7 @@ Represents the Go board and the stones placed on it. Supports sizes 9×9, 13×13
 Run the following in your terminal:
 
 ```bash
-python3 -c "from FP2324P2 import *; go(9, (), ())"
+python3 -c "from go import *; go(9, (), ())"
 ```
 
 Or launch an interactive Python session:
@@ -106,15 +106,15 @@ python3
 ```
 
 ```python
->>> from FP2324P2 import *
+>>> from go import *
 
 # Start a 9x9 game with an empty board
 >>> go(9, (), ())
 
 # Start a game with pre-placed stones
->>> ib = ('C1', 'C2', 'C3', 'D2', 'D3', 'D4', 'A3', 'B3')
->>> ip = ('E4', 'E5', 'F4', 'F5', 'G6', 'G7')
->>> go(9, ib, ip)
+>>> white_stones = ('C1', 'C2', 'C3', 'D2', 'D3', 'D4', 'A3', 'B3')
+>>> black_stones = ('E4', 'E5', 'F4', 'F5', 'G6', 'G7')
+>>> go(9, white_stones, black_stones)
 ```
 
 During the game, each player is prompted to either enter an intersection (e.g. `G5`) or `P` to pass. The game ends when both players pass consecutively.
