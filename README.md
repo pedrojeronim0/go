@@ -119,6 +119,8 @@ python3
 
 During the game, each player is prompted to either enter an intersection (e.g. `G5`) or `P` to pass. The game ends when both players pass consecutively.
 
+go() returns True if the white player wins, False otherwise. If both players have the same score, white wins.
+
 ---
 
 ## Requirements
